@@ -13,5 +13,5 @@ map("n", "<leader>sa", "ggVG", { desc = "Select all" })
 -- Copy selection to clipboard (normal and visual mode)
 map({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank to clipboard" })
 
--- Paste from clipboard (normal and insert mode)
-map({ "n", "i" }, "<leader>p", '"+p', { desc = "Paste from clipboard" })
+-- Paste from clipboard (normal)
+map({ "n" }, "<leader>p", '"+p', { desc = "Paste from clipboard" })
