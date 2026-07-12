@@ -15,3 +15,13 @@ map({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank to clipboard" })
 
 -- Paste from clipboard (normal)
 map({ "n" }, "<leader>p", '"+p', { desc = "Paste from clipboard" })
+
+-- Paste over highlighted text without overwriting your copy register
+map("v", "p", '"_dP', { desc = "Paste without overwriting register" })
+
+-- And don't forget the black hole delete we talked about earlier!
+map({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without copying" })
+
+-- Move selected lines up and down in visual mode
+map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
+map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
